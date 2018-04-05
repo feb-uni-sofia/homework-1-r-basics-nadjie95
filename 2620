@@ -1,38 +1,69 @@
+## WARNING: use the files Problem_1.R, Problem_2.R, etc. to write your 
+## solution otherwise your homework/exam will not be reviewed and will not be graded at all.
+
+## NOTE: readability: leave some blank linkes between the code to make it more readable.
 
 #Problem 1
 #a
 x<-c(4,1,1,4)
+
 #b
 y<-c(1;4)
+
 #c
 DELTA_COST<-(x-y)
 DELT_COST
+## Missing explanation
+
+## Not relevant!
 mean(DELTA_COST)
+
 #d
+
+## Don't overwrite built-in objects like all. Run
+?all
+## to see what it does
+
 all<-c(x,y)
 all
 s<-c(4,1,1,4,1,4)
+
+## Not relevant!
 names(s)<-c(4,1,1,4,1,4)
 names(s)
+
 #e
+## Use the already defined vector 's' instead of retyping it
 rep(c(4,1,1,4,1,4),times=10)
 length(s)
+
 #f
 rep(c(4,1,1,4,1,4),each=3)
+
 #g
 s<-7:21
 s
+
 #h
+## Do not assign within function calls.
 lengh(s<-7:21)
+
 #Problem 2
 #a
 xmin<-c(23.0,20.5,28.2,20.3,22.4,12.2,18.2)
 xmax<-c(25.0,22.8,31.2,28.4,20.4,24.1)
+
+## Do not overwrite date. It's an internal function.
+
 date<-c('03Mon18','04Tue18',,'05Wed18', '04Thu18', '05Wed18','04Thu18', '05Fri18'', 06Sat18','07Sun18')
+
 #b
+## Not relevant. We are not looking for the absolute difference here!
+
 DELTA_COST<-abs(xmax-xmin)
 DELTA_COST
 #c
+## Use the 'mean' function, no need for verbosity.
 xmax
 totalxmax<-sum(xmax)
 totalxmax
@@ -43,12 +74,19 @@ avgxmax<-totalxmax/length(xmax)
 avgxmax
 avgxmax<-totalxmib/length(xmin)
 avgxmax
+
 #d
+## Not relevant to _this_ question!
 names(xmin)<-date
 xmin[c('04Tue18','04Thu18','06Sat18','07Sum18'0]
 #e
 xmin[c('03Mon18','05Wes18','05Fri18')]
+
 #f
+
+## NOTE that in the future inclusion of unnecessary code
+## will lead to score reduction.
+
 xminbelow<-c(20.5,20.3,17.2,18.2)
 xminbelow
 dateabelow<-c(04Tue18', '04Thu18','06Sat18','07Sun18')
@@ -67,14 +105,32 @@ names(xmax)<-date
 xmax[c('03Mon18','04True18','05Wed18','04Thu18','05Fri18','06Sat18','07Sun18')]
 xmax
 #g
+
 xmin_name<-"xmin"
 xmax_name<-"xmax"
 xmax_name<-"xmax"
+
+## Unnecessary code. The following line is all that was asked for.
 temperatures<-data.frame(xmin,xmax)
 names(temperatures)<-c(xmin_name,xmax_name)
 print(temperatures)
+
+## 
+
 #h
+## What you define here (celsius) already exists in the
+## data frame 'temperatures'
 celsius=c(20.0,20.5,28.2,20.3,22.4,17.2,18.2)
+
+## This code is not valid. You may have tried to define a function.
+## This was not required.
+
+temperatures <- within(temperatures, {
+	xminFahrenheit <- xmin * 9 / 5 + 32
+})
+
+## was all that was asked for.
+
 toFahrenheit["xminFahrenheit"]<-toFahrenheit(celsius){f=(9/5)*celsius+32;return(f);}
 toFahrenheit(celsius)
 temperatures["xminFahrenheit"]<-toFahrenheit(celsius)
